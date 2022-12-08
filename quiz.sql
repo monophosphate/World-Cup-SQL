@@ -41,7 +41,7 @@ Relevant
 SELECT 
   wcs.Year,
   wcs.Host_Country,
-  COUNT(distinct matches.Stadium) AS stadium_count
+  COUNT(DISTINCT matches.Stadium) AS stadium_count
 FROM world_cup_tournaments AS wcs
 LEFT JOIN world_cup_matches AS matches
 ON wcs.Year = matches.Year
